@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+    converter:
+        container_name: converter
+        build: .
+        ports:
+            - "8080:80"
+        expose:
+            - "9000"
+        volumes:
+            - ./converter:/var/www/site
+        networks:
+            - converter-network
+
+    database:
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        environment:
+            - "MYSQL_ROOT_PASSWORD=1234"
+            - "MYSQL_DATABASE=database"
+            - "MYSQL_ROOT_HOST=%"
+        networks:
+            - converter-network
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8081:80"
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+            PMA_HOST: database
+        networks:
+            - converter-network
+networks:
+    converter-network:
+        driver: bridge
