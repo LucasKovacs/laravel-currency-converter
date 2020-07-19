@@ -19,3 +19,11 @@ DB_USERNAME=root
 DB_PASSWORD=1234
 ```
   - Finally, on your browser go to http://localhost:8081 to access phpMyAdmin, and there create a new database called "laravel_converter".
+  
+ # Generate a .env file
+If there's no .env file, on your project root, where laravel is located, run the following two commands.
+
+```
+cp .env.example .env
+php artisan key:generate
+```
