@@ -18,4 +18,4 @@ DB_DATABASE=laravel_converter
 DB_USERNAME=root
 DB_PASSWORD=1234
 ```
-  -- On your browser go to http://localhost:8081 to access phpMyAdmin, and there create a new database called "laravel_converter".
+  - Finally, on your browser go to http://localhost:8081 to access phpMyAdmin, and there create a new database called "laravel_converter".
