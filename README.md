@@ -11,8 +11,11 @@ LCC is a currency converter, mobile-ready, built with Larevel and by default lin
 # DB set-up
   - Open your .env file
   - Set the following data
-  -- DB_HOST=database
-  -- DB_DATABASE=laravel_converter
-  -- DB_USERNAME=root
-  -- DB_PASSWORD=1234
-  -- On your browser go to http://localhost:8081 to access phpMyAdmin, there create a new database called "laravel_converter".
+  
+  ```
+DB_HOST=database
+DB_DATABASE=laravel_converter
+DB_USERNAME=root
+DB_PASSWORD=1234
+```
+  -- On your browser go to http://localhost:8081 to access phpMyAdmin, and there create a new database called "laravel_converter".
